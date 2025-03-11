@@ -46,15 +46,31 @@ def call_kiotviet(bill_code):
     response = requests.post(URL, headers=HEADERS, params=PARAMS, data=input_data)
     if response.status_code == 200:
         data = response.json()
-        # print(data)
-        result = {
-            'code': data['Data'][1]['Code'],
-            'customer_name': data['Data'][1]['Customer']['Name'],
-            'customer_phone': data['Data'][1]['Customer']['ContactNumber'],
-            'address': data['Data'][1]['Customer']['Address'],
-            'bill': data['Data'][1]['Total']
-        }
+        print(data)
+        result = {}
+        try:
+            result = {
+                'code': data['Data'][1]['Code'],
+                'customer_name': data['Data'][1]['CustomerName'] if data['Data'][1]['CustomerName'] != '' else 'Khách Lẻ',
+                'customer_phone': data['Data'][1]['CustomerContactNumber'],
+                'address': data['Data'][1]['CustomerAddress'],
+                'bill': data['Data'][1]['Total'],
+                'error': ''
+            }
+
+        except IndexError:
+            print("Error: lỗi dữ liệu từ kiotviet trả về")
+            result = {
+                'error': 'lỗi dữ liệu từ kiotviet trả về'
+            }
+        except Exception as e:
+            print("Error: " + str(e))
+            result = {
+                'error': e
+            }
         return result
     else:
         print(f"Error {response.status_code}: {response.text}")
-        return None
+        return {
+                'error': 'Lỗi Mã HTTP <> 200 ! Call API Thất bại'
+            }

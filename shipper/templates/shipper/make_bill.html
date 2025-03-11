@@ -17,11 +17,14 @@
 			</div>
 			<div class="col-md-3" id="button-function">
 				<button class="btn btn-primary" id="add-new-bill" onclick="add_new_bill()"><i
-						class="fa-regular fa fa-plus-square"></i> Thêm</button>
+						class="fa fa-plus-square"></i> Thêm</button>
 				<button class="btn btn-secondary" id="reset-bill" onclick="reset_bill()"><i
-						class="fa-regular fa fa-refresh"></i> Reset</button>
+						class="fa fa-undo"></i> Reset</button>
 			</div>
-			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<button class="btn btn-outline-info" data-toggle="modal" data-target="#defaultModalPrimary"><i
+						class="fa fa-check-square"></i> Xác nhận chốt đơn</button>
+			</div>
 			<div class="col-md-1" id="title-money">
 				<strong>Tổng tiền</strong>
 			</div>
@@ -47,8 +50,9 @@
 								<th>Khách hàng</th>
 								<th>SĐT</th>
 								<th>Địa chỉ</th>
+								<th>Chuyển khoản</th>
 								<th>Tổng tiền</th>
-								<th id="width-table-action">Actions</th>
+								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -75,6 +79,31 @@
 						</div>
 					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="defaultModalPrimary" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Xác nhận chốt danh sách đơn</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body m-2">
+					<p class="mb-0">Nhập tên shipper thực hiện tập đơn đang có trên màn hình, sau đó bấm xác nhận ! </p>
+					<p class="mb-0">Ví dụ tên Shipper là <b class="text-danger">Nguyễn Văn An</b> thì nhập là <b class="text-danger">annv</b></p>
+				</div>
+				<div class="modal-body m-2" style="padding-top: 0; padding-bottom: 32px">
+					<input type="text" class="form-control" id="shipper" placeholder="Nhập tên shipper" autocomplete="off">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+					<button type="button" class="btn btn-primary" onclick="confirm_bill()">Xác nhận</button>
 				</div>
 			</div>
 		</div>

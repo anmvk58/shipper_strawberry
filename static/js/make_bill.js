@@ -11,7 +11,6 @@ function check_bill_code(bill_code) {
     }
 
     if (!list_bill.includes(bill_code)) {
-        list_bill.push(bill_code)
         return true
     } else {
         pushNotification('Bill Code Exsist', 'Mã bill đã tồn tại !!!', 'error')
@@ -46,49 +45,65 @@ function add_new_bill() {
 
     // Call API to kiotviet to get information of this bill_code
     $.ajax({
-            url: '/shipper/search-bill/',
-            type: 'GET',
-            data: {
-                'bill': input_bill
-            },
-            success: function(data_response) {
-                // Hiển thị kết quả trả về từ máy chủ
-                console.log(data_response)
-                // var customer_name = data.customer_name
-                // var phone = data_response.customer_phone
-                // var address = data_response.address
-                // var bill = data_response.bill
-
-                // Calculate total_bill money:
-                total_bill += data_response.bill
-
-                // Fill data to table
-                $("#datatables-basic tbody").append(
-                    '<tr id="' + input_bill + '">' +
-                    '<td id="' + 'stt_' + input_bill + '">' + ++count + '</td>' +
-                    '<td>' + input_bill + '</td>' +
-                    '<td>' + data_response.customer_name + '</td>' +
-                    '<td>' + data_response.customer_phone + '</td>' +
-                    '<td>' + data_response.address + '</td>' +
-                    '<td id="' + 'bill_' + input_bill + '">' + new Intl.NumberFormat().format(data_response.bill) + '</td>' +
-                    '<td class="table-action width-table-action">' +
-                    '<a href="#"  onclick="delete_one_bill(\'' + input_bill + '\')"><i class="fa-regular fa-trash-can"></i></a>' +
-                    '</td>' +
-                    '</tr>'
-                )
-
-                // Update total bill
-                $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
-                // Clear input bill
-                $('#bill_input').val('');
-                $('#bill_input').focus();
-
-                pushNotification('Add new bill', 'Thêm bill thành công !', 'success')
-            },
-            error: function(xhr, status, error) {
-                console.error('Error:', error);
+        url: '/shipper/search-bill/',
+        type: 'GET',
+        data: {
+            'bill': input_bill
+        },
+        success: function (data_response) {
+            // Hiển thị kết quả trả về từ máy chủ
+            console.log(data_response)
+            // console.log(data_response.error)
+            if (data_response.error.length > 0) {
+                pushNotification('Có Lỗi Xảy Ra !!!', data_response.error, 'error')
+                return
             }
-        });
+
+            // Calculate total_bill money:
+            total_bill += data_response.bill
+
+            // Fill data to table
+            $("#datatables-basic tbody").append(
+                '<tr id="' + input_bill + '">' +
+                '<td id="' + 'stt_' + input_bill + '">' + ++count + '</td>' +
+                '<td>' + input_bill + '</td>' +
+                '<td>' + data_response.customer_name + '</td>' +
+                '<td>' + data_response.customer_phone + '</td>' +
+                '<td>' + data_response.address + '</td>' +
+                '<td>' + '<input type="checkbox"  id="' + 'ck_' + input_bill + '" className="form-check-input">' + '</td>' +
+                '<td id="' + 'bill_' + input_bill + '">' + new Intl.NumberFormat().format(data_response.bill) + '</td>' +
+                '<td class="table-action width-table-action">' +
+                '<a href="#"  onclick="delete_one_bill(\'' + input_bill + '\')"><i class="fa-regular fa-trash-can"></i></a>' +
+                '</td>' +
+                '</tr>'
+            )
+
+            // Update total bill
+            $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
+            // Clear input bill
+            $('#bill_input').val('');
+            $('#bill_input').focus();
+
+            // Add event on tickbox ck:
+            $('#ck_' + input_bill).on('change', function () {
+                if (this.checked) {
+                    console.log("Checkbox với ID " + this.id + " được tích vào!");
+                    total_bill -= data_response.bill
+                    $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
+                } else {
+                    console.log("Checkbox với ID " + this.id + " bị bỏ tích!");
+                    total_bill += data_response.bill
+                    $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
+                }
+            });
+
+            pushNotification('Add new bill', 'Thêm bill thành công !', 'success')
+            list_bill.push(input_bill)
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', error);
+        }
+    });
     // This block should code to complete this feature
 }
 
@@ -128,4 +143,50 @@ function delete_one_bill(bill_code) {
     list_bill.splice(index, 1)
 
     pushNotification('Delete Bill', 'Xóa bill thành công !', 'success')
+}
+
+// function to sumbit list bill to python server
+function confirm_bill() {
+    // 1. collect name of shipper:
+    var shipper = $("#shipper").val()
+    if (shipper === '') {
+        pushNotification('Shipper Name Error', 'Vui lòng nhập tên Shipper !!!', 'error')
+        return
+    }
+
+    if (list_bill.length === 0) {
+        pushNotification('Bills Error', 'Chưa nhập danh sách đơn !!!', 'error')
+        $("#shipper").val('').blur();
+        $("#defaultModalPrimary").modal('hide');
+        return
+    }
+
+
+    // collect all array bill_code and send to Django
+    // determind that what ck or not
+    var result = []
+    list_bill.forEach(function(bill) {
+        var check_ck = $('#ck_' + bill).prop('checked');
+        let item = {
+            bill_code: bill,
+            transfer: check_ck
+        }
+
+        result.push(item)
+    });
+
+    console.log({
+        shipper: shipper,
+        bills: result
+    })
+
+    // close modal
+    $("#shipper").val('').blur();
+    $("#defaultModalPrimary").modal('hide');
+
+    // noti success
+    pushNotification('Create Successfully', 'Ghi nhận bảng kê thành công !!!', 'success')
+
+    //reset
+    reset_bill()
 }
