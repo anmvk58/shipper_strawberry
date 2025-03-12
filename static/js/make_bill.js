@@ -175,10 +175,24 @@ function confirm_bill() {
         result.push(item)
     });
 
-    console.log({
-        shipper: shipper,
-        bills: result
-    })
+    // Call api
+    $.ajax({
+        url: "/shipper/confirm-bill/",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(
+            {
+                shipper: shipper,
+                bills: result
+            }
+        ),
+        success: function (response) {
+            console.log("Success:", response);
+        },
+        error: function (xhr) {
+            console.log("Error:", xhr.responseText);
+        }
+    });
 
     // close modal
     $("#shipper").val('').blur();

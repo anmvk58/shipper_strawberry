@@ -1,7 +1,10 @@
+import datetime
+import json
 from django.http import JsonResponse
 from django.shortcuts import render
 import requests
 from .utils import call_kiotviet
+from django.views.decorators.csrf import csrf_exempt
 
 url = "https://6213945d89fad53b1ff9b5aa.mockapi.io/api/v1/shipper"
 headers = {
@@ -16,7 +19,34 @@ def make_list_bill_for_ship(request):
 
 
 def search_bill(request):
-    global data
     bill_code = request.GET.get('bill', '')
     return JsonResponse(call_kiotviet(bill_code), safe=False)
 
+@csrf_exempt
+def confirm_bill(request):
+    data = json.loads(request.body)
+    shipper = data.get("shipper")
+    bills = data.get("bills")
+
+    current_date = datetime.datetime.now().strftime("%Y%m%d")
+    file_name = f"{current_date}.txt"
+
+    # Nội dung cần thêm vào file
+    content_to_append = shipper + "\n"
+    for index, item in enumerate(bills):
+        content_to_append += item['bill_code']
+        if item['transfer']:
+            content_to_append += "\\"
+        if index < len(bills) - 1:
+            content_to_append += "*"
+    content_to_append += "\n\n"
+    # Mở file với chế độ append (a), sẽ tạo file nếu chưa tồn tại
+    with open(file_name, 'a') as file:
+        file.write(content_to_append)
+
+    # make response to return
+    result = {
+        "message": "Success !"
+    }
+
+    return JsonResponse(result, safe=False)
