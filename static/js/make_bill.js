@@ -85,7 +85,7 @@ function add_new_bill() {
             $('#bill_input').focus();
 
             // Add event on tickbox ck:
-            $('#ck_' + input_bill).on('change', function () {
+            $('[id="ck_' + input_bill + '"]').on('change', function () {
                 if (this.checked) {
                     console.log("Checkbox với ID " + this.id + " được tích vào!");
                     total_bill -= data_response.bill
@@ -119,7 +119,7 @@ $('#bill_input').keypress(function (event) {
 // function to delete one row
 function delete_one_bill(bill_code) {
     // get money of bill and subtract from total money
-    var bill_money = $('#bill_' + bill_code).text()
+    var bill_money = $('[id="bill_' + bill_code + '"]').text()
     total_bill -= parseInt(bill_money.replace('.', ''))
     // Update total bill
     $('#total_bill').val(new Intl.NumberFormat().format(total_bill))
@@ -135,7 +135,7 @@ function delete_one_bill(bill_code) {
 
     // update STT bigger than item deleted to lower
     for (i = index + 1; i < list_bill.length; i++) {
-        $('td#stt_' + list_bill[i]).text(i);
+        $('td[id="stt_' + list_bill[i] + '"]').text(i);
         // console.log(i)
     }
 
@@ -166,7 +166,8 @@ function confirm_bill() {
     // determind that what ck or not
     var result = []
     list_bill.forEach(function(bill) {
-        var check_ck = $('#ck_' + bill).prop('checked');
+//        $('[id="ck_HD020702.01"]').prop('checked')
+        var check_ck = $('[id="ck_' + bill + '"]').prop('checked');
         let item = {
             bill_code: bill,
             transfer: check_ck
@@ -174,6 +175,13 @@ function confirm_bill() {
 
         result.push(item)
     });
+
+    console.log(JSON.stringify(
+            {
+                shipper: shipper,
+                bills: result
+            }
+        ))
 
     // Call api
     $.ajax({

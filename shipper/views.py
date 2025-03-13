@@ -25,6 +25,7 @@ def search_bill(request):
 @csrf_exempt
 def confirm_bill(request):
     data = json.loads(request.body)
+    # print(json.dumps(request.body, indent=4, ensure_ascii=False))
     shipper = data.get("shipper")
     bills = data.get("bills")
 
@@ -41,7 +42,7 @@ def confirm_bill(request):
             content_to_append += "*"
     content_to_append += "\n\n"
     # Mở file với chế độ append (a), sẽ tạo file nếu chưa tồn tại
-    with open(file_name, 'a') as file:
+    with open(file_name, 'a', encoding="utf-8") as file:
         file.write(content_to_append)
 
     # make response to return

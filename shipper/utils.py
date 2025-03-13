@@ -1,3 +1,5 @@
+import json
+
 import requests
 from decouple import config
 
@@ -46,14 +48,16 @@ def call_kiotviet(bill_code):
     response = requests.post(URL, headers=HEADERS, params=PARAMS, data=input_data)
     if response.status_code == 200:
         data = response.json()
-        print(data)
+        # print(data)
+        # print(json.dumps(data, indent=4, ensure_ascii=False))
         result = {}
+
         try:
             result = {
                 'code': data['Data'][1]['Code'],
                 'customer_name': data['Data'][1]['CustomerName'] if data['Data'][1]['CustomerName'] != '' else 'Khách Lẻ',
                 'customer_phone': data['Data'][1]['CustomerContactNumber'],
-                'address': data['Data'][1]['CustomerAddress'],
+                'address': data['Data'][1]['CustomerAddress'] if "CustomerAddress" in data['Data'][1] else "---",
                 'bill': data['Data'][1]['Total'],
                 'error': ''
             }

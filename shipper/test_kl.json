@@ -1,557 +1,331 @@
 {
-  "Total1Value": 0,
-  "Total2Value": 0,
-  "Total3Value": 0,
-  "Total4Value": 0,
-  "Total5Value": 0,
-  "Total6Value": 0,
-  "TotalTax": 0,
-  "TotalTaxDirect": 0,
-  "Total": 1,
-  "PageSize": 0,
-  "Data": [
-    {
-      "Id": -1,
-      "CreatedBy": 0,
-      "RetailerId": 0,
-      "Discount": 0,
-      "Status": 0,
-      "BranchId": 0,
-      "SoldById": 0,
-      "Total": 0,
-      "TotalPayment": 0,
-      "TotalPaymentOld": 0,
-      "TotalOther": 0,
-      "Debt": 0,
-      "Surcharge": 0,
-      "NewInvoiceTotal": 0,
-      "Payments": [],
-      "Returns": [],
-      "InvoiceDeliveries": [],
-      "InvoiceOrderSurcharges": [],
-      "Invoice
-      Details
-      ": [], "
-      InvoicePromotions
-      ": [], "
-      InvoiceVouchers
-      ": [], "
-      CouponUsageTrackings
-      ": [], "
-      DeliveryPackages
-      ": [], "
-      DeliveryPayments
-      ": [], "
-      DeliveryInfoes
-      ": [], "
-      InvoiceDeliveryTrackings
-      ": [], "
-      InvoiceWarranties
-      ": [], "
-      EInvoices
-      ": [], "
-      CustomerName
-      ": "
-      ",
-      "CustomerEmail": "",
-      "CustomerContactNumber": "",
-      "CustomerAddress": "",
-      "CustomerLocationName": "",
-      "CustomerWardName": "",
-      "OrderCode": "",
-      "CustomerPoint": 0,
-      "CustomerOldPoint": 0,
-      "CustomerCode": "",
-      "HasPaymentVoucher": False,
-      "PaidAmou
-      nt
-      ": 0, "
-      PaymentId
-      ": 0, "
-      PaymentMethod
-      ": "
-      ", "
-      StatusValue
-      ": "
-      ", "
-      SubTotal
-      ": 0, "
-      TotalQuantity
-      ": 0, "
-      HasLotSerialControl
-      ": False, "
-      CompareSoldById
-      ": 0, "
-      CompareStatus
-      ": 0, "
-      SaleChannelName
-      ": "
-      ", "
-      IsUpdateSoldBy
-      ": False, "
-      UpdateInvoiceId
-      ": 0, "
-      Filter
-      edSurcharge
-      ": 0, "
-      UpdateReturnId
-      ": 0, "
-      PaidByMethods
-      ": 0, "
-      IsChangeNormalToShippingDelivery
-      ": False, "
-      CodNeedPayment
-      ": 0, "
-      SumDeliveryPrices
-      ": 0, "
-      CrudGuid
-      ": "
-      00000000000000000000000000000000
-      ", "
-      OrderStatus
-      ": 0, "
-      IsHavePurchasePayment
-      ": False}, {"
-      I
-      d
-      ": 1075024361, "
-      PurchaseDate
-      ": "
-      2025-03-03T08: 42
-      :
-      31.7070000
-      +
-      07: 00
-      ", "
-      CreatedDate
-      ": "
-      2025-03-03T08: 42
-      :
-      31.7330000
-      +
-      07: 00
-      ", "
-      CreatedBy
-      ": 1001484880, "
-      RetailerId
-      ": 500689731, "
-      Code
-      ": "
-      HD017794
-      ", "
-      Status
-      ": 1, "
-      BranchId
-      ": 1000018342, "
-      SoldById
-      ": 10014848
-      80,
-      "Total": 49000.0,
-      "TotalPayment": 49000.0,
-      "TotalPaymentOld": 49000.0,
-      "TotalOther": 0.0,
-      "Debt": 0.0,
-      "UsingCod": 0,
-      "Surcharge": 0.0,
-      "Uuid": "WN03f8500f-9189-4cf0-bcd1-c9bb8e84575a",
-      "NewInvoiceTotal": 49000.0,
-      "PayingAmount": 49000.0,
-      "Sold
-      By
-      ": {"
-      Id
-      ": 0, "
-      GivenName
-      ": "
-      Huong
-      Tran
-      ", "
-      MobilePhone
-      ": "
-      +
-      840588582715
-      ", "
-      IsActive
-      ": False, "
-      IsAdmin
-      ": False, "
-      RetailerId
-      ": 0, "
-      Type
-      ": 0, "
-      CreatedBy
-      ": 0, "
-      CanAccessAnySite
-      ": False, "
-      Permissions
-      ": [], "
-      PurchaseOrders
-      ": [], "
-      Apps
-      ": [], "
-      Returns
-      ": [],
-      "BalanceAdjustments": [],
-      "ObjectAccesses": [],
-      "Payments": [],
-      "Invoices": [],
-      "Transfers": [],
-      "PropertyAccesses": [],
-      "PurchaseReturns": [],
-      "PurchasePayments": [],
-      "PriceBookUsers": [],
-      "CashFlows": [],
-      "Invoices1": [],
-      "Orders": [],
-      "Returns
-      1
-      ": [], "
-      Manufacturings
-      ": [], "
-      DamageItems
-      ": [], "
-      TokenApis
-      ": [], "
-      SmsEmailTemplates
-      ": [], "
-      BalanceAdjustments1
-      ": [], "
-      PointAdjustments
-      ": [], "
-      PointAdjustmentsCreatedBy
-      ": [], "
-      NotificationSettings
-      ": [], "
-      DamageItems1
-      ": [], "
-      PurchaseOrders1
-      ": [], "
-      P
-      urchaseReturns1
-      ": [], "
-      CostAdjustments
-      ": [], "
-      Devices
-      ": [], "
-      OrderSuppliers
-      ": [], "
-      OrderSuppliers1
-      ": [], "
-      EInvoices
-      ": [], "
-      Name
-      ": "
-      Huong
-      Tran
-      ", "
-      CompareGivenName
-      ": "
-      Huong
-      Tran
-      ", "
-      CompareIsLimitedByTrans
-      ": False, "
-      CompareIsShowSumRow
-      ": True}, "
-      Payme
-      nts
-      ": [{"
-      Id
-      ": 1069666880, "
-      Code
-      ": "
-      TTHD017794
-      ", "
-      Amount
-      ": 49000.0, "
-      AmountOriginal
-      ": 49000.0, "
-      Method
-      ": "
-      Cash
-      ", "
-      CreatedBy
-      ": 0, "
-      RetailerId
-      ": 0, "
-      BranchId
-      ": 0, "
-      Status
-      ": 0, "
-      System
-      ": False, "
-      DeliveryPayments
-      ": [], "
-      PaymentAllocation
-      ": []}], "
-      User
-      ":
-    {
-      "Id": 0,
-      "GivenName": "Huong Tran",
-      "IsActive": False,
-      "IsAdmin": False,
-      "RetailerId": 0,
-      "Type": 0,
-      "CreatedBy": 0,
-      "CanAccessAnySite": False,
-      "Permissions": [],
-      "PurchaseOrders": [],
-      "Apps": [],
-      "Returns": [],
-      "BalanceAdjustments": [],
-      "ObjectAccesses": [],
-      "Payments": [],
-      "Invoices": [],
-      "Transfers": [],
-      "PropertyAccesses": [],
-      "PurchaseReturns": [],
-      "PurchasePayments": [],
-      "PriceBookUsers": [],
-      "CashFlows": [],
-      "Invoices1": [],
-      "Orders": [],
-      "Returns1": [],
-      "Manufacturings": [],
-      "DamageItems
-      ": [], "
-      TokenApis
-      ": [], "
-      SmsEmailTemplates
-      ": [], "
-      BalanceAdjustments1
-      ": [], "
-      PointAdjustments
-      ": [], "
-      PointAdjustmentsCreatedBy
-      ": [], "
-      NotificationSettings
-      ": [], "
-      DamageItems1
-      ": [], "
-      PurchaseOrders1
-      ": [], "
-      PurchaseReturns1
-      ": [], "
-      CostAdjustmen
-      ts
-      ": [], "
-      Devices
-      ": [], "
-      OrderSuppliers
-      ": [], "
-      OrderSuppliers1
-      ": [], "
-      EInvoices
-      ": [], "
-      Name
-      ": "
-      Huong
-      Tran
-      ", "
-      CompareGivenName
-      ": "
-      Huong
-      Tran
-      ", "
-      CompareIsLimitedByTrans
-      ": False, "
-      CompareIsShowSumRow
-      ": True}, "
-      PriceBook
-      ": {"
-      Id
-      ": 0, "
-      Name
-      ": "
-      Bảng
-      giá
-      c
-      hung
-      ", "
-      IsActive
-      ": False, "
-      IsGlobal
-      ": False, "
-      CreatedBy
-      ": 0, "
-      RetailerId
-      ": 0, "
-      ForAllUser
-      ": False, "
-      ForAllCusGroup
-      ": False, "
-      PriceBookBranches
-      ": [], "
-      PriceBookDetails
-      ": [], "
-      PriceBookCustomerGroups
-      ": [], "
-      PriceBookUsers
-      ": [], "
-      Invoices
-      ": [], "
-      AdrAp
-      plications
-      ": [], "
-      Returns
-      ": []}, "
-      InvoiceDeliveries
-      ": [], "
-      InvoiceOrderSurcharges
-      ": [], "
-      InvoiceVouchers
-      ": [], "
-      CouponUsageTrackings
-      ": [], "
-      DeliveryPackages
-      ": [], "
-      DeliveryPayments
-      ": [], "
-      DeliveryInfoes
-      ": [], "
-      InvoiceDeliveryTrackings
-      ": [], "
-      Paymen
-      tCode
-      ": "
-      TTHD017794
-      ", "
-      CustomerName
-      ": "
-      ", "
-      CustomerEmail
-      ": "
-      ", "
-      CustomerContactNumber
-      ": "
-      ", "
-      CustomerAddress
-      ": "
-      ", "
-      CustomerLocationName
-      ": "
-      ", "
-      CustomerWardName
-      ": "
-      ", "
-      OrderCode
-      ": "
-      ", "
-      CustomerPoint
-      ": 0, "
-      CustomerOldPoint
-      ": 0, "
-      CustomerCode
-      ": "
-      ", "
-      HasPaymentVoucher
-      ": False, "
-      PaidAmount
-      ": 49000.0, "
-      PaymentId
-      ": 1069666880, "
-      PaymentMethod
-      ": "
-      Tiền
-      mặt
-      ", "
-      StatusValue
-      ": "
-      Hoàn
-      thành
-      ", "
-      SubTotal
-      ": 49000.0, "
-      TotalQuantity
-      ": 0, "
-      HasLotSerialControl
-      ": False, "
-      CompareSoldById
-      ": 1001484880, "
-      ComparePurch
-      aseDate
-      ": "
-      2025-03-03T08: 42
-      :
-      31.7070000
-      +
-      07: 00
-      ", "
-      CompareStatus
-      ": 1, "
-      SaleChannelName
-      ": "
-      ", "
-      IsUpdateSoldBy
-      ": False, "
-      UpdateInvoiceId
-      ": 0, "
-      UpdateReturnId
-      ": 0, "
-      IsChangeNormalToShippingDelivery
-      ": False, "
-      CrudGuid
-      ": "
-      00000000000000000000000000000000
-      ",
-      "OrderStatus": 0,
-      "IsHavePurchasePayment": False
-    }
-  ],
-  "Filter": {
-    "__type": "KiotViet.Web.Api.InvoiceList, KiotViet.Web.Api",
-    "Includes": [
-      "Customer",
-      "Payments",
-      "User"
+    "Total1Value": 0,
+    "Total2Value": 0,
+    "Total3Value": 0,
+    "Total4Value": 0,
+    "Total5Value": 0,
+    "Total6Value": 0,
+    "TotalTax": 0,
+    "TotalTaxDirect": 0,
+    "Total": 1,
+    "PageSize": 0,
+    "Data": [
+        {
+            "Id": -1,
+            "CreatedBy": 0,
+            "RetailerId": 0,
+            "Discount": 0,
+            "Status": 0,
+            "BranchId": 0,
+            "SoldById": 0,
+            "Total": 0,
+            "TotalPayment": 0,
+            "TotalPaymentOld": 0,
+            "TotalOther": 0,
+            "Debt": 0,
+            "Surcharge": 0,
+            "NewInvoiceTotal": 0,
+            "Payments": [],
+            "Returns": [],
+            "InvoiceDeliveries": [],
+            "InvoiceOrderSurcharges": [],
+            "InvoiceDetails": [],
+            "InvoicePromotions": [],
+            "InvoiceVouchers": [],
+            "CouponUsageTrackings": [],
+            "DeliveryPackages": [],
+            "DeliveryPayments": [],
+            "DeliveryInfoes": [],
+            "InvoiceDeliveryTrackings": [],
+            "InvoiceWarranties": [],
+            "EInvoices": [],
+            "CustomerName": "",
+            "CustomerEmail": "",
+            "CustomerContactNumber": "",
+            "CustomerAddress": "",
+            "CustomerLocationName": "",
+            "CustomerWardName": "",
+            "OrderCode": "",
+            "CustomerPoint": 0,
+            "CustomerOldPoint": 0,
+            "CustomerCode": "",
+            "HasPaymentVoucher": false,
+            "PaidAmount": 0,
+            "PaymentId": 0,
+            "PaymentMethod": "",
+            "StatusValue": "",
+            "SubTotal": 0,
+            "TotalQuantity": 0,
+            "HasLotSerialControl": false,
+            "CompareSoldById": 0,
+            "CompareStatus": 0,
+            "SaleChannelName": "",
+            "IsUpdateSoldBy": false,
+            "UpdateInvoiceId": 0,
+            "FilteredSurcharge": 0,
+            "UpdateReturnId": 0,
+            "PaidByMethods": 0,
+            "IsChangeNormalToShippingDelivery": false,
+            "CodNeedPayment": 0,
+            "SumDeliveryPrices": 0,
+            "CrudGuid": "00000000000000000000000000000000",
+            "OrderStatus": 0,
+            "IsHavePurchasePayment": false
+        },
+        {
+            "Id": 55655975,
+            "PurchaseDate": "2025-03-13T00:26:25.6500000+07:00",
+            "CreatedDate": "2025-03-13T00:26:25.6570000+07:00",
+            "CreatedBy": 1001484880,
+            "RetailerId": 500689731,
+            "Code": "HD020645",
+            "Status": 1,
+            "BranchId": 1000018342,
+            "CustomerId": 11408168,
+            "SoldById": 1001484880,
+            "Total": 159000.0,
+            "TotalPayment": 159000.0,
+            "TotalPaymentOld": 159000.0,
+            "TotalOther": 0.0,
+            "Debt": 0.0,
+            "UsingCod": 0,
+            "Surcharge": 0.0,
+            "Uuid": "WN72778361-2ac1-4170-b5b5-ff6d31e7b21b",
+            "NewInvoiceTotal": 159000.0,
+            "PayingAmount": 159000.0,
+            "Customer": {
+                "Id": 11408168,
+                "Type": 0,
+                "Code": "KH011591",
+                "Name": "Trang Minh",
+                "Organization": "",
+                "ContactNumber": "0973748042",
+                "RetailerId": 0,
+                "Debt": 0.0,
+                "CreatedBy": 0,
+                "LocationName": "",
+                "IsActive": false,
+                "WardName": "",
+                "Orders": [],
+                "Returns": [],
+                "Payments": [],
+                "Invoices": [],
+                "CustomerGroupDetails": [],
+                "CustomerSocials": [],
+                "AddressBooks": [],
+                "PaymentAllocation": [],
+                "CompareCode": "KH011591",
+                "CompareName": "Trang Minh",
+                "GenderName": "",
+                "MustUpdateDebt": false,
+                "MustUpdatePoint": false,
+                "InvoiceCount": 0,
+                "TotalRevenue": 0,
+                "IsCusSupCombine": false
+            },
+            "SoldBy": {
+                "Id": 0,
+                "GivenName": "Huong Tran",
+                "MobilePhone": "+840588582715",
+                "IsActive": false,
+                "IsAdmin": false,
+                "RetailerId": 0,
+                "Type": 0,
+                "CreatedBy": 0,
+                "CanAccessAnySite": false,
+                "Permissions": [],
+                "PurchaseOrders": [],
+                "Apps": [],
+                "Returns": [],
+                "BalanceAdjustments": [],
+                "ObjectAccesses": [],
+                "Payments": [],
+                "Invoices": [],
+                "Transfers": [],
+                "PropertyAccesses": [],
+                "PurchaseReturns": [],
+                "PurchasePayments": [],
+                "PriceBookUsers": [],
+                "CashFlows": [],
+                "Invoices1": [],
+                "Orders": [],
+                "Returns1": [],
+                "Manufacturings": [],
+                "DamageItems": [],
+                "TokenApis": [],
+                "SmsEmailTemplates": [],
+                "BalanceAdjustments1": [],
+                "PointAdjustments": [],
+                "PointAdjustmentsCreatedBy": [],
+                "NotificationSettings": [],
+                "DamageItems1": [],
+                "PurchaseOrders1": [],
+                "PurchaseReturns1": [],
+                "CostAdjustments": [],
+                "Devices": [],
+                "OrderSuppliers": [],
+                "OrderSuppliers1": [],
+                "EInvoices": [],
+                "Name": "Huong Tran",
+                "CompareGivenName": "Huong Tran",
+                "CompareIsLimitedByTrans": false,
+                "CompareIsShowSumRow": true
+            },
+            "Payments": [
+                {
+                    "Id": 52113337,
+                    "Code": "TTHD020645",
+                    "Amount": 159000.0,
+                    "AmountOriginal": 159000.0,
+                    "Method": "Cash",
+                    "CreatedBy": 0,
+                    "RetailerId": 0,
+                    "BranchId": 0,
+                    "Status": 0,
+                    "System": false,
+                    "DeliveryPayments": [],
+                    "PaymentAllocation": []
+                }
+            ],
+            "User": {
+                "Id": 0,
+                "GivenName": "Huong Tran",
+                "IsActive": false,
+                "IsAdmin": false,
+                "RetailerId": 0,
+                "Type": 0,
+                "CreatedBy": 0,
+                "CanAccessAnySite": false,
+                "Permissions": [],
+                "PurchaseOrders": [],
+                "Apps": [],
+                "Returns": [],
+                "BalanceAdjustments": [],
+                "ObjectAccesses": [],
+                "Payments": [],
+                "Invoices": [],
+                "Transfers": [],
+                "PropertyAccesses": [],
+                "PurchaseReturns": [],
+                "PurchasePayments": [],
+                "PriceBookUsers": [],
+                "CashFlows": [],
+                "Invoices1": [],
+                "Orders": [],
+                "Returns1": [],
+                "Manufacturings": [],
+                "DamageItems": [],
+                "TokenApis": [],
+                "SmsEmailTemplates": [],
+                "BalanceAdjustments1": [],
+                "PointAdjustments": [],
+                "PointAdjustmentsCreatedBy": [],
+                "NotificationSettings": [],
+                "DamageItems1": [],
+                "PurchaseOrders1": [],
+                "PurchaseReturns1": [],
+                "CostAdjustments": [],
+                "Devices": [],
+                "OrderSuppliers": [],
+                "OrderSuppliers1": [],
+                "EInvoices": [],
+                "Name": "Huong Tran",
+                "CompareGivenName": "Huong Tran",
+                "CompareIsLimitedByTrans": false,
+                "CompareIsShowSumRow": true
+            },
+            "PriceBook": {
+                "Id": 0,
+                "Name": "Bảng giá chung",
+                "IsActive": false,
+                "IsGlobal": false,
+                "CreatedBy": 0,
+                "RetailerId": 0,
+                "ForAllUser": false,
+                "ForAllCusGroup": false,
+                "PriceBookBranches": [],
+                "PriceBookDetails": [],
+                "PriceBookCustomerGroups": [],
+                "PriceBookUsers": [],
+                "Invoices": [],
+                "AdrApplications": [],
+                "Returns": []
+            },
+            "InvoiceDeliveries": [],
+            "InvoiceOrderSurcharges": [],
+            "InvoiceVouchers": [],
+            "CouponUsageTrackings": [],
+            "DeliveryPackages": [],
+            "DeliveryPayments": [],
+            "DeliveryInfoes": [],
+            "InvoiceDeliveryTrackings": [],
+            "PaymentCode": "TTHD020645",
+            "CustomerName": "Trang Minh",
+            "CustomerContactNumber": "0973748042",
+            "CustomerLocationName": "",
+            "CustomerWardName": "",
+            "OrderCode": "",
+            "CustomerPoint": 0,
+            "CustomerOldPoint": 0,
+            "CustomerCode": "KH011591",
+            "HasPaymentVoucher": false,
+            "PaidAmount": 159000.0,
+            "PaymentId": 52113337,
+            "PaymentMethod": "Tiền mặt",
+            "StatusValue": "Hoàn thành",
+            "SubTotal": 159000.0,
+            "TotalQuantity": 0,
+            "HasLotSerialControl": false,
+            "CompareSoldById": 1001484880,
+            "ComparePurchaseDate": "2025-03-13T00:26:25.6500000+07:00",
+            "CompareStatus": 1,
+            "SaleChannelName": "",
+            "IsUpdateSoldBy": false,
+            "UpdateInvoiceId": 0,
+            "UpdateReturnId": 0,
+            "IsChangeNormalToShippingDelivery": false,
+            "CrudGuid": "00000000000000000000000000000000",
+            "OrderStatus": 0,
+            "IsHavePurchasePayment": false
+        }
     ],
-    "ForSale": False,
-    "DescriptionProductKey": "",
-    "CustomerKey": "",
-    "SerialKey": "",
-    "BatchExpireKey": "",
-    "DeliveryCode": "",
-    "UserNameKey": "",
-    "CreateUserName": "",
-    "TotalValueOnly": False,
-    "ForSummaryRow": True,
-    "ForReturn": False,
-    "ForExportDetail": False,
-    "ExpectedDeliveryFilterType": "alltime",
-    "OrderCode": "",
-    "UsingSt
-    oreProcedure
-    ": False, "
-    FiltersForOrm
-    ": "{
-  "Code": "HD017794",
-  "Description": "",
-  "DescriptionProduct": "",
-  "BranchIds": [
-    1000018342
-  ],
-  "PriceBookIds": [],
-  "FromDate": null,
-  "ToDate": null,
-  "FromDateStr": null,
-  "ToDateStr": null,
-  "TimeRange": "thisweek",
-  "InvoiceStatus": [
-    3,
-    1
-  ],
-  "UsingCod": [],
-  "TableIds": [],
-  "SalechannelIds": [],
-  "StartDeliveryDate": null,
-  "EndDeliveryDate": null,
-  "StartDeliveryDateStr": null,
-  "EndDeliveryDateStr": null,
-  "UsingPrescription": 2,
-  "Prescription": "",
-  "Patient": "",
-  "Diagnosis": ""
-}", "IsCheckTransaction":
-False, "ForReturnFilter": False, "ForPromotionHistory": False, "UsingTotalApi": True, "SkipUseOrmLite": False, "SkipZipExported": False, "FromSale": False, "InvoiceStatus": [3, 1], "$top": 15, "$filter": "(substringof("HD017794",Code) and Purchase
-Date eq "thisweek")"}, "Timestamp": "2025-03-04T16: 15: 16.2032371+07: 00"}
+    "Filter": {
+        "__type": "KiotViet.Web.Api.InvoiceList, KiotViet.Web.Api",
+        "Includes": [
+            "Customer",
+            "Payments",
+            "User"
+        ],
+        "ForSale": false,
+        "DescriptionProductKey": "",
+        "CustomerKey": "",
+        "SerialKey": "",
+        "BatchExpireKey": "",
+        "DeliveryCode": "",
+        "UserNameKey": "",
+        "CreateUserName": "",
+        "TotalValueOnly": false,
+        "ForSummaryRow": true,
+        "ForReturn": false,
+        "ForExportDetail": false,
+        "ExpectedDeliveryFilterType": "alltime",
+        "OrderCode": "",
+        "UsingStoreProcedure": false,
+        "FiltersForOrm": "{\"Code\":\"HD020645\",\"Description\":\"\",\"DescriptionProduct\":\"\",\"BranchIds\":[1000018342],\"PriceBookIds\":[],\"FromDate\":null,\"ToDate\":null,\"FromDateStr\":null,\"ToDateStr\":null,\"TimeRange\":\"thisweek\
+",\"InvoiceStatus\":[3,1],\"UsingCod\":[],\"TableIds\":[],\"SalechannelIds\":[],\"StartDeliveryDate\":null,\"EndDeliveryDate\":null,\"StartDeliveryDateStr\":null,\"EndDeliveryDateStr\":null,\"UsingPrescription\":2,\"Prescription\":\"\",\"Patient\":\"\",\"Diagnosis\":\"\"}",
+        "IsCheckTransaction": false,
+        "ForReturnFilter": false,
+        "ForPromotionHistory": false,
+        "UsingTotalApi": true,
+        "SkipUseOrmLite": false,
+        "SkipZipExported": false,
+        "FromSale": false,
+        "InvoiceStatus": [
+            3,
+            1
+        ],
+        "$top": 15,
+        "$filter": "(substringof('HD020645',Code) and PurchaseDate eq 'thisweek')"
+    },
+    "Timestamp": "2025-03-13T22:11:48.5117692+07:00"
+}
