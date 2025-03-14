@@ -37,22 +37,23 @@
 </head>
 
 <body>
-
+{% block content %}
+{% endblock %}
 
 {#   Insert navbar:     #}
-<div class="wrapper">
-    {% include "includes/navbar.html" %}
-    <div class="main">
-        {% include "includes/navbar_horizontal.html" %}
-        <main class="content">
-            <div class="container-fluid p-0">
-                {% block content %}
-                {% endblock %}
-            </div>
-        </main>
-    </div>
+<!--<div class="wrapper">-->
+{#   {% include "includes/navbar.html" %} #}
+<!--    <div class="main">-->
+{#        {% include "includes/navbar_horizontal.html" %} #}
+<!--        <main class="content">-->
+<!--            <div class="container-fluid p-0">-->
+            {#   {% block content %} #}
+            {#  {% endblock %} #}
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
 
-</div>
 
 </body>
 

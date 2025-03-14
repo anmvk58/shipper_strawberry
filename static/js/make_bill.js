@@ -20,6 +20,13 @@ $(document).ready(function () {
             }
         }
     });
+
+    $("#bill_input").focus();
+
+    $('#defaultModalPrimary').on('shown.bs.modal', function () {
+        $("#shipper").focus();
+    });
+
 });
 
 
@@ -51,6 +58,7 @@ function reset_bill() {
     list_bill = []
     $('#total_bill').val(total_bill)
     pushNotification('Reset new Session', 'Đã reset phiên làm việc mới', 'info')
+    $("#bill_input").focus();
 }
 
 
