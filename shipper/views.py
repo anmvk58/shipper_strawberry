@@ -3,7 +3,7 @@ import json
 from django.http import JsonResponse
 from django.shortcuts import render
 import requests
-from .utils import call_kiotviet
+from .utils import call_kiotviet, make_bill
 from django.views.decorators.csrf import csrf_exempt
 
 url = "https://6213945d89fad53b1ff9b5aa.mockapi.io/api/v1/shipper"
@@ -20,6 +20,7 @@ def make_list_bill_for_ship(request):
 
 def search_bill(request):
     bill_code = request.GET.get('bill', '')
+    bill_code = make_bill(bill_code)
     return JsonResponse(call_kiotviet(bill_code), safe=False)
 
 @csrf_exempt

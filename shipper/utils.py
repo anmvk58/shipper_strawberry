@@ -78,3 +78,59 @@ def call_kiotviet(bill_code):
         return {
                 'error': 'Lỗi Mã HTTP <> 200 ! Call API Thất bại'
             }
+
+
+def generate_zero(n):
+    """
+    Hàm này chỉ để generate mỗi chuỗi gồm n số 0 với n được truyền vào
+    :param n: số length chuỗi cần gen
+    :type n: int
+    :return:
+    """
+    result = ''
+    for i in range(n):
+        result += '0'
+    return result
+
+def make_bill(bill):
+    """
+    Chuyển đổi thành mã bill đúng với Kiot Việt. định dạng là HD000107 (length = 8)
+    Đối với mã đã được update -> sẽ có thêm hậu tố .01 ví dụ HD000107.01, HD000107.02 tùy vào update bao nhiêu lần
+    Đối với mã đã được chuyển khoản -> sẽ có thêm hậu tố / để đánh dấu làm bước xử lý tính toán tiền
+    :param bill: mã bill được nhập từ input txt
+    :type bill: str
+    :return: mã bill đã được chuẩn hóa
+    """
+    # nếu bắt đầu = HD thì return luôn
+    if bill.startswith("HD"):
+        return bill
+
+    # nếu length >= 9 thì return luôn
+    if "." in bill or "/" in bill:
+        if len(bill[:bill.find('.')]) >= 8:
+            return bill
+    else:
+        if len(bill) >= 9:
+            return bill
+
+    # 1.check có phải đơn chỉnh sửa hay không:
+    modify_flag = False
+    if '.' in bill:
+        modify_flag = True
+
+    # 2.tính ra mã bill gốc nhập từ txt (bỏ qua đơn sửa . và đơn chuyển khoản /)
+    if modify_flag:
+        org_bill_code = bill[:bill.find('.')]
+    else:
+        org_bill_code = bill.replace('/', '')
+
+    # 3.tính ra mã bill chuẩn với hệ thống kiotviet:
+    kiot_bill = 'HD' + generate_zero(6 - len(org_bill_code)) + org_bill_code
+
+    # 4.thêm vào hậu tố đơn sửa và đơn chuyển khoản nếu có:
+    if modify_flag:
+        kiot_bill += bill[bill.find('.'):bill.find('.') + 3]
+    if '/' in bill:
+        kiot_bill += '/'
+
+    return kiot_bill

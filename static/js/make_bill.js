@@ -3,6 +3,28 @@ var count = 0
 var total_bill = 0
 var list_bill = []
 
+$(document).ready(function () {
+    $(document).on("keydown", function (event) {
+        if (event.code === "Space") {
+            event.preventDefault(); // Ngăn cuộn trang khi nhấn Space
+            console.log("Phím Space được nhấn!");
+
+            if (list_bill.length === 0) {
+                console.log("Không có bill nào cả")
+                pushNotification('Có Lỗi Xảy Ra !!!', 'Không có bill nào cả', 'error')
+            } else {
+                var last_bill = list_bill[list_bill.length - 1];
+                console.log(last_bill)
+                var checkbox = $('[id="ck_' + last_bill + '"]')
+                checkbox.prop("checked", !checkbox.prop("checked"));
+            }
+        }
+    });
+});
+
+
+
+
 // function to check bill_code validate first
 function check_bill_code(bill_code) {
     if (bill_code === '') {
