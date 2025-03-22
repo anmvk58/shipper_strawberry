@@ -12,11 +12,26 @@ $(document).ready(function () {
             if (list_bill.length === 0) {
                 console.log("Không có bill nào cả")
                 pushNotification('Có Lỗi Xảy Ra !!!', 'Không có bill nào cả', 'error')
+				$("#bill_input").focus();
             } else {
                 var last_bill = list_bill[list_bill.length - 1];
                 console.log(last_bill)
                 var checkbox = $('[id="ck_' + last_bill + '"]')
                 checkbox.prop("checked", !checkbox.prop("checked"));
+
+                var bill_money = $('[id="bill_' + last_bill + '"]').text()
+                
+                // fix money add or subtract
+                if (checkbox.is(':checked')) {
+                    console.log("hello other side")
+                    total_bill -= parseInt(bill_money.replace('.', ''))
+                    $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
+                } else {
+                    console.log("hello other side -1")
+                    total_bill += parseInt(bill_money.replace('.', ''))
+                    $('#total_bill').val(new Intl.NumberFormat().format(total_bill));
+                }
+                
             }
         }
     });

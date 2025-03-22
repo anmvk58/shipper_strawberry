@@ -49,7 +49,7 @@ def call_kiotviet(bill_code):
     if response.status_code == 200:
         data = response.json()
         # print(data)
-        # print(json.dumps(data, indent=4, ensure_ascii=False))
+        print(json.dumps(data, indent=4, ensure_ascii=False))
         result = {}
 
         try:
