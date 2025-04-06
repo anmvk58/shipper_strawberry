@@ -38,7 +38,7 @@ def confirm_bill(request):
     for index, item in enumerate(bills):
         content_to_append += item['bill_code']
         if item['transfer']:
-            content_to_append += "\\"
+            content_to_append += "/"
         if index < len(bills) - 1:
             content_to_append += "*"
     content_to_append += "\n\n"
